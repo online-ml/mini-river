@@ -36,6 +36,10 @@ name = "keystroke"
 path = "examples/classification/keystroke.rs"
 
 [[example]]
+name = "machine_degradations"
+path = "examples/regression/machine_degradations.rs"
+
+[[example]]
 name = "synthetic"
 path = "examples/classification/synthetic.rs"
 

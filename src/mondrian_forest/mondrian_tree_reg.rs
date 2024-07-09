@@ -471,7 +471,7 @@ impl<F: FType> MondrianTreeRegressor<F> {
             let exp_dist = Exp::new(lambda.to_f32().unwrap()).unwrap();
             let exp_sample = F::from_f32(exp_dist.sample(&mut self.rng)).unwrap();
             // DEBUG: shadowing with Exp expected value
-            let exp_sample = F::one() / lambda;
+            // let exp_sample = F::one() / lambda;
             exp_sample
         };
         let split_time = self.compute_split_time(time, exp_sample, node_idx, extensions.sum());
@@ -488,7 +488,7 @@ impl<F: FType> MondrianTreeRegressor<F> {
                     .collect::<Array1<F>>();
                 let e_sample = F::from_f32(self.rng.gen::<f32>()).unwrap() * extensions.sum();
                 // DEBUG: shadowing with expected value
-                let e_sample = F::from_f32(0.5).unwrap() * extensions.sum();
+                // let e_sample = F::from_f32(0.5).unwrap() * extensions.sum();
                 // println!("go_downwards() - split_time: {split_time}, cumsum: {cumsum}, e_sample: {e_sample}");
                 cumsum.iter().position(|&val| val > e_sample).unwrap()
             };
@@ -508,7 +508,7 @@ impl<F: FType> MondrianTreeRegressor<F> {
             };
             let threshold: F = F::from_f32(self.rng.gen_range(lower_bound..upper_bound)).unwrap();
             // DEBUG: split in the middle
-            let threshold = F::from_f32((lower_bound + upper_bound) / 2.0).unwrap();
+            // let threshold = F::from_f32((lower_bound + upper_bound) / 2.0).unwrap();
             // println!(
             //     "Threshold: {threshold} - Lower: {}, Upper: {}",
             //     lower_bound, upper_bound
