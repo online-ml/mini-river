@@ -11,6 +11,7 @@ use std::{fs::File, path::Path};
 pub struct MachineDegradation;
 impl MachineDegradation {
     pub fn load_data() -> IterCsv<f32, File> {
+        // TODO: come up a way to follow the 302 redirect
         // let url = "https://www.kaggle.com/datasets/inIT-OWL/one-year-industrial-component-degradation/download/fA53OHmuZ0enYASBqytj%2Fversions%2FvXObUJmxGJQSUSC2Wyc7%2Ffiles%2F01-04T184148_000_mode1.csv?datasetVersionNumber=1";
         let file_name = "one-year-industrial-component-degradation.csv";
 
