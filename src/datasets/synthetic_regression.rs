@@ -7,7 +7,7 @@ use super::utils;
 
 /// Scikit learn synthetic dataset for regression.
 ///
-/// Genearted using 'make_regression' API.
+/// Generated using 'make_regression' API.
 pub struct SyntheticRegression;
 impl SyntheticRegression {
     pub fn load_data() -> IterCsv<f32, File> {
