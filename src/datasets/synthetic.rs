@@ -7,7 +7,7 @@ use super::utils;
 
 /// Scikit learn synthetic dataset for classification.
 ///
-/// Genearted using 'make_classification' API.
+/// Generated using 'make_classification' API.
 pub struct Synthetic;
 impl Synthetic {
     pub fn load_data() -> IterCsv<f32, File> {
